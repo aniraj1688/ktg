@@ -338,3 +338,18 @@ body{
 	color: white;
 	z-index:1;
 }
+@keyframes ani{
+	0%{background: red;transform:translate(-30%,0px);opacity:0.1;}
+	50%{background: blue;}
+	100%{background: yellow;transform:translate(0%,0px);opacity:1;}
+}
+.covid{
+	animation-name: ani;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+}
+.text,.b1{
+	animation-name: ani;
+	animation-duration:2s;
+	animation-iteration-count: 1;
+}
