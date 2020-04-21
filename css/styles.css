@@ -13,6 +13,7 @@ html,body{
 body{
 	text-align: center;
 	padding:15px;
+        font-family: 'Montserrat', sans-serif;
 }
 
 .intro{
@@ -42,7 +43,7 @@ body{
 .navlink{
 
 	color: white;
-	padding:10px 20px;
+	padding:10px 10px;
 	display: inline-block;
 	text-decoration: none;
 
@@ -56,7 +57,8 @@ body{
 
 }
 .text{
-	position: relative;
+	position: absolute;
+	width:100%;
 	top: 50%;
 	color: white;
 	transform: translate(0%,-50%);
@@ -64,11 +66,13 @@ body{
 }
 .t1{
 	display: block;
+	position: relative;
 	font-size:400%;
-	letter-spacing: 25px;
+	letter-spacing: 30px;
 	font-weight:700;
 	border: solid 2px;
 	opacity:0.8;
+	
 }
 .t2{
 	font-size:150%;
@@ -83,7 +87,7 @@ body{
 	position: absolute;
 	border-radius: 50px;
 	left: 39%;
-	top:64%;
+	top:65%;
 	font-size: 22px;
 	display: inline-block;
 	padding: 10px 30px;
@@ -110,10 +114,11 @@ body{
 }
 .soon1{
 	color: white;
-	font-size: 32px;
+	font-size: 34px;
 	background: rgba(127,120,210,0.5);
 	padding: 10px;
 	font-weight: 800;
+	box-shadow: 2px 2px 5px 2px blue;;
 	
 }
 .t3{
@@ -190,12 +195,14 @@ body{
 	position: relative;
 	background:rgba(239,243,198,0.5);
 	border-radius: 20px;
-	box-shadow:2px 2px 5px 5px rgba(0,0,0,0.5);
+	animation: glow 2s infinite;
+	border:2px solid white;
 }
 .ss{
 	padding:10px;
 	font-weight:900;
 	color: #f0a500;
+	font-size: 32px;
 }
 
 .sim{
@@ -222,7 +229,7 @@ body{
 	border-radius:10px;
 	padding:10px;
 	margin: 20px auto 40px auto;
-	height:200vh;
+
 	background-image: linear-gradient(to bottom right,#363636,#00a8cc);
 	background-size: cover;
 	background-position: center;
@@ -249,6 +256,7 @@ body{
 	border-radius:10px;
 	background: rgba(255,255,255,0.9);
 	margin:10px;
+	animation: glow 2s infinite;
 }
 .mbim{
 	border-radius:100%;
@@ -256,14 +264,14 @@ body{
 	height:140px;
 }
 .happy{
-	background-image:url("../images/flowers.jpg");
+	background-image: linear-gradient(to right bottom,rgba(126,213,111,0.4),rgba(40,180,131,0.4)),url("../images/flowers.jpg");
 	background-size: cover;
 	text-align: center;
 	border-radius:20px;
 	overflow: scroll;
 }
 .container3{
-	height: 80vh;
+	height: 65vh;
 	position: relative;
 }
 .review{
@@ -272,9 +280,10 @@ body{
 	display:inine-block;
 	background:rgba(0,0,0,0.5);
 	font-weight:700;
-	color:white;
+	color: white;
 	border-radius: 15px;
-	box-shadow:2px 2px 5px 5px rgba(0,0,0,0.6);
+	box-shadow:2px 2px 5px 5px rgba(0,0,0,0.7);
+	border: solid 2px rgba(255,255,255,.7);
 }
 .p1{
 	height:70px;
@@ -283,7 +292,7 @@ body{
 	float: left;
 }
 .give{
-	background-image:url("../images/sea.jpg");
+	background-image: linear-gradient(to right bottom,rgba(126,213,111,0.4),rgba(40,180,131,0.4)),url("../images/sea.jpg");
 	background-size: cover;
 	background-position: center;
 	text-align: center;
@@ -327,6 +336,7 @@ body{
 	height:50px;
 }
 .button{
+	width: 8%;
 	display:inline-block;
 	background:rgba(0,0,0,0.7);
 	padding:10px;
@@ -337,19 +347,65 @@ body{
 	bottom:20px;
 	color: white;
 	z-index:1;
+	animation: glow 2.8s infinite;
 }
 @keyframes ani{
 	0%{background: red;transform:translate(-30%,0px);opacity:0.1;}
-	50%{background: blue;}
+	50%{background: blue;opacity:0.5;}
 	100%{background: yellow;transform:translate(0%,0px);opacity:1;}
+	
+
 }
 .covid{
 	animation-name: ani;
 	animation-duration:2s;
 	animation-iteration-count: infinite;
 }
-.text,.b1{
+@keyframes aniket{
+	0%{transform:scalex(1.5);}
+	100%{transform:scalex(1);}
+}
+.b1{
 	animation-name: ani;
 	animation-duration:2s;
 	animation-iteration-count: 1;
 }
+@keyframes glow{
+	0%{box-shadow:2px 2px 2px 2px rgba(255,255,255,0.5);}
+	50%{box-shadow:2px 2px 4px 4px rgba(255,255,255,0.8);}
+	75%{box-shadow:3px 3px 4px 4px rgba(255,255,255,1);}
+	100%{box-shadow:2px 2px 2px 2px rgba(255,255,255,0.5);}
+}
+.t1:hover{
+	letter-spacing:40px;
+	transition:2s;
+}
+.button:hover{
+	transform:scale(1.4);
+	transition:1s;
+}
+.soon1:hover,.t2:hover{
+	letter-spacing:15px;
+	transition:2s;
+}
+.text{
+	animation: aniket 2s 1;
+}
+.s:hover{
+	transform:translate(5px,5px) scale(1.1,1.1);
+	transition:0.8s;
+}
+.mb:hover{
+	transform:translate(5px,5px) scale(1.1,1.1);
+	transition:0.8s;
+}
+.review:hover{
+	transform:translate(5px,5px) scale(1.1,1.1);
+	transition:0.8s;
+	background:rgba(0,0,0,0.9);
+}
+.kk:hover{
+	letter-spacing:12px;
+	transition:2s;
+}
+
